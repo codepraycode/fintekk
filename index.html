@@ -14,23 +14,52 @@
 </head>
 <body>
     <a class="skip-to-content" href="#main">Skip to content</a>
-    <header>
-        <h1>
-            Hello World!.
-        </h1>
+    <header class="container container--header flex align-center">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./assets/images/shared/logo.svg" alt="Fintekk"/>
+        </div>
 
-        <button class="btn-primary btn">
-            Sign up for fress
+        <!-- Navigation -->
+        <button 
+            class="mobile-navigation-toggle" 
+            aria-controls="main-navigation"
+            aria-expanded="false"
+        >
+            <span class="sr-only">Menu</span>
         </button>
-        <button class="btn-primary--outline btn">
-            Login
-        </button>
-        <button class="btn btn-dark--outline btn-sm">
-            Get on google
-        </button>
-        <button class="btn-white btn rounded">
-            signup
-        </button>
+
+        <nav id="main-navigation" class="main-navigation flex" data-visible="true">
+            <ul 
+                class="flex"
+                role="list"
+            >
+
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">FAQs</a>
+                </li>
+                <li>
+                    <a href="#">Contact us</a>
+                </li>
+            </ul>
+
+            
+            <div class="call-to-action flex">
+                <button class="btn btn-primary-outline">
+                    Login
+                </button>
+                <button class="btn btn-primary">
+                    Sign Up for free
+                </button>
+
+            </div>
+        </nav>
     </header>
     <main id="main">
     </main>
