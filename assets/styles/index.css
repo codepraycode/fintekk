@@ -201,7 +201,7 @@ select {
 
 .bg-primary--outline {
     background-color: transparent;
-    border-color: hsl(var(--clr-accent));
+    border: 1px solid hsl(var(--clr-accent));
     color: hsl(var(--clr-primary));
 }
 
@@ -249,4 +249,70 @@ select {
 .fs-700,
 .fs-600 {
     line-height: 1.1;
+}
+
+/* -------------------- */
+/* Components           */
+/* -------------------- */
+.btn {
+    font-size: 1rem;
+    display: flex;
+    place-items: center;
+    padding: .4em 1em;
+    text-decoration: none;
+    border-radius: .5em;
+    border-width: 0;
+    margin-block: 1rem;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out;
+}
+
+.btn.btn-primary {
+    background-color: hsl(var(--clr-accent));
+    color: hsl( var(--clr-white));
+}
+
+.btn.btn-primary--outline {
+    border: 1px solid hsl(var(--clr-accent));
+    background-color: transparent;
+    color: hsl( var(--clr-accent));
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+    background-color: hsl(var(--clr-primary));
+}
+
+.btn.btn-primary--outline:hover,
+.btn.btn-primary--outline:focus {
+    border-color: transparent;
+    background-color: hsl( var(--clr-accent));
+    color: hsl( var(--clr-white));
+}
+
+
+.btn.btn-dark {
+    background-color: hsl(var(--clr-dark), .7);
+    color: hsl( var(--clr-white));
+}
+
+.btn.btn-dark--outline {
+    border: 1px solid hsl(var(--clr-dark));
+    background-color: transparent;
+    color: hsl( var(--clr-dark));
+}
+
+.btn.btn-dark:hover,
+.btn.btn-dark:focus {
+    background-color: hsl(var(--clr-dark), 1);
+}
+
+.btn-white {
+    background-color: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+}
+
+.btn.rounded {
+    --radius: 1.8rem;
+    border-radius: var(--radius, 1.8rem);
+    border: 1px solid red;
 }
