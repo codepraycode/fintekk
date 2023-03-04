@@ -143,13 +143,18 @@ select {
     display: block;
 }
 
+.my-1 {
+    margin-block: 1rem;
+}
 .mx-auto {
     margin-inline: auto;
 }
 
 .w-70 {
     width: clamp(700px, 70%, 100%);
-    /* background-color: red; */
+}
+.w-50 {
+    width: clamp(700px, 50%, 100%);
 }
 
 @media (max-width: 760px) {
@@ -169,8 +174,10 @@ select {
         display: block;
     }
 
-    .w-70 {
+    .w-70,
+    .w-50 {
         width: 90vw;
+        margin-left: 0;
     }
 
 }
@@ -212,6 +219,11 @@ select {
     padding-block: var(--v-space,1rem);
 }
 
+@media (max-width: 1000px) {
+    .container {
+        padding-inline: 1rem;
+    }
+}
 @media (min-width: 1000px) {
     .container {
         padding-inline: min(7rem, 7vw);
