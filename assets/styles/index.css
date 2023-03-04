@@ -7,6 +7,8 @@
     --clr-white: 0, 0%, 100%;
     --clr-accent: 227, 100%, 59%;
     --clr-primary: 227, 70%, 30%;
+    --clr-light: 28, 87%, 97%;
+    --clr-light-accent: 229, 100%, 98%;
 
     /* Fonts */
     /* Default font size is 16px, so dividing every font size from mockup by 16 */
@@ -290,6 +292,13 @@ select {
     background-color: transparent;
     border: 1px solid hsl(var(--clr-accent));
     color: hsl(var(--clr-primary));
+}
+
+.bg-light {
+    background-color: hsl(var(--clr-light));
+}
+.bg-light-accent {
+    background-color: hsl(var(--clr-light-accent));
 }
 
 .text-dark {
@@ -620,4 +629,27 @@ select {
         overflow-x: scroll;
         
     }
+}
+
+
+
+.container--services {
+    --v-space: 5rem;
+}
+
+.container--services .article-list {
+    margin-top: 5rem;
+    justify-content: center;
+    column-gap: min(5rem, 2vw);
+    flex-wrap: wrap;
+}
+
+.container--services .article-list > * {
+    width: 20rem;
+    max-width: 100%;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .8rem;
+    border-radius: 1rem;
 }
