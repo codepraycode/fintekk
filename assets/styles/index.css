@@ -25,12 +25,18 @@
     /* Screen sizes */
     /* --big-screen: 1000px; */
 }
-@media (max-width: 760px) {
+@media (max-width: 985px) {
     :root {
-        --fs-700: 2.375rem;/* 38px */
-        --fs-300: 1rem;/* 16px */
+        --fs-700: clamp(3.5rem, 5vw, 5.5em);
     }
 }
+@media (max-width: 1900px) {
+    :root {
+        --fs-700: clamp(3.5rem, 5vw, 8rem);
+    }
+}
+
+
 /* ---------------------- */
 /* Reset                  */
 /* ---------------------- */
@@ -77,7 +83,6 @@ dl,
 dd {
     margin: 0;
 }
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
@@ -138,6 +143,15 @@ select {
     display: block;
 }
 
+.mx-auto {
+    margin-inline: auto;
+}
+
+.w-70 {
+    width: clamp(700px, 70%, 100%);
+    /* background-color: red; */
+}
+
 @media (max-width: 760px) {
     .flex-sm-column {
         --gap: 0rem;
@@ -153,6 +167,10 @@ select {
     }
     .d-sm-block {
         display: block;
+    }
+
+    .w-70 {
+        width: 90vw;
     }
 
 }
@@ -190,9 +208,8 @@ select {
 /* Container styles */
 .container {
     margin-inline: auto;
-    /* max-width: 95vw; */
     padding-inline: 2rem;
-    
+    padding-block: var(--v-space,1rem);
 }
 
 @media (min-width: 1000px) {
@@ -269,8 +286,14 @@ select {
 .text-primary {
     color: hsl(var(--clr-primary));
 }
+.text-accent {
+    color: hsl(var(--clr-accent));
+}
 .text-white {
     color: hsl(var(--clr-white));
+}
+.text-center {
+    text-align: center;
 }
 
 /* Spacing */
@@ -285,6 +308,13 @@ select {
 .letter-spacing-3 {
     letter-spacing: 2.35px;
 }
+
+.line-height-1 {
+    line-height: 1.1;
+} 
+.line-height-2 {
+    line-height: 1.5 !important;
+} 
 
 /* Font cases */
 .uppercase {
@@ -316,6 +346,11 @@ select {
     font-weight: 300;
 }
 
+@media (max-width: 760px) {
+    .fs-400--sm {
+        font-size: var(--fs-500);
+    }
+}
 /* -------------------- */
 /* Components           */
 /* -------------------- */
@@ -519,7 +554,7 @@ select {
 }
 
 .container--hero h1 {
-    font-size: clamp(2.8rem, 5vw, 5.5em);
+    /* font-size: clamp(2.8rem, 5vw, 5.5em); */
     line-height: 1.1;
 }
 .container--hero p {
@@ -538,18 +573,8 @@ select {
         text-align: center;
     }
 }
-
-@media (min-width:  985px) {
-    .container--hero h1 {
-        font-size: clamp(3.5rem, 5vw, 5.5em);
-        line-height: 1.1;
-    }
-}
-
 @media (min-width:  1900px) {
     .container--hero h1 {
-        font-size: clamp(3.5rem, 5vw, 8rem);
-        line-height: 1.1;
         width: 80%;
     }
 
