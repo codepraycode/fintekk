@@ -748,6 +748,7 @@ select {
 
 .container--faq .accordion .accordion-item button{
     position: relative;
+    padding-right: 2.2rem;
 
     border: 1px solid hsl( var(--clr-white) );
     background: transparent;
@@ -776,7 +777,7 @@ select {
     background-position: center center;
     background-repeat: no-repeat;
 
-    right: 1rem;
+    right: .4rem;
     top: 1rem;
 
     transition: transform 700ms ease-in-out;
@@ -803,8 +804,11 @@ select {
 }
 
 @media (max-width: 760px) {
-
+    .container--faq {
+        flex-direction: column-reverse;
+        row-gap: 4rem;
+    }
     .container--faq .faq {
-        padding-inline: 1.5rem;
+        padding-inline: 1rem;
     }
 }
