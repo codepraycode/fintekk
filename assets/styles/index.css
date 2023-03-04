@@ -557,3 +557,30 @@ select {
         width: 70%;
     }
 }
+
+
+/* Companies */
+
+.container--companies {
+    padding-block: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.container--companies .companies-items {
+    padding: .5rem;
+    display: flex;
+    justify-content: space-around;    
+}
+
+
+@media (max-width: 760px) {
+    .container--companies {
+        padding-inline: 1rem;
+    }
+    .container--companies .companies-items {
+        width: 900px;
+        overflow-x: scroll;
+        
+    }
+}
