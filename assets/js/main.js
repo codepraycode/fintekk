@@ -6,6 +6,14 @@ navToggle.addEventListener("click", ()=>toggleSidebar(null));
 
 document.getElementById("main").addEventListener("click", ()=>toggleSidebar(false));
 
+const accordion = document.querySelector('.accordion');
+const accordionTabs = accordion.querySelectorAll('[role="tab"]');
+
+accordionTabs.forEach((tab)=>{
+    tab.addEventListener('click', toggleAccordion)
+})
+
+
 
 function toggleSidebar(state=null){
     const visibility = nav.getAttribute("data-visible");
@@ -26,4 +34,24 @@ function toggleSidebar(state=null){
         nav.setAttribute('data-visible', false);
         navToggle.setAttribute("aria-expanded", false);
     }
+}
+
+function toggleAccordion(e){
+
+    const isClosed = e.target.getAttribute("aria-selected") === "false";
+    e.target.setAttribute("aria-selected", isClosed ? true : false);
+    if (isClosed) e.target.focus();
+
+    accordionTabs.forEach((ech)=>ech !== e.target && ech.setAttribute("aria-selected", false))
+}
+
+function hideContent(parent, content) {
+    parent.querySelectorAll(content)
+    .forEach((item)=>{
+        item.setAttribute("hidden", true);
+    })
+}
+
+function showContent(parent, content) {
+    parent.querySelector(content).removeAttribute('hidden');
 }

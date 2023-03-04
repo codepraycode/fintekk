@@ -779,7 +779,7 @@ select {
     right: 1rem;
     top: 1rem;
 
-    transition: transform 250ms ease-in-out;
+    transition: transform 700ms ease-in-out;
 
 }
 .container--faq .accordion .accordion-item button[aria-selected="true"]::after {
@@ -791,14 +791,15 @@ select {
     text-align: left;
     border-radius: .3rem;
     height: 0px;
+    visibility: hidden;
     overflow: hidden;
 
-    transition: height 250ms ease-in-out;
 }
 
 .container--faq .accordion .accordion-item button[aria-selected="true"] ~ p{
     padding: 1.4rem 1.5rem;
     height: fit-content;
+    visibility: visible;
 }
 
 @media (max-width: 760px) {
