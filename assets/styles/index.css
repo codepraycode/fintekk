@@ -89,6 +89,7 @@ dd {
 ul[role='list'],
 ol[role='list'] {
     list-style: none;
+    padding: 0;
 }
 
 /* Set core body defaults */
@@ -652,4 +653,62 @@ select {
     flex-direction: column;
     row-gap: .8rem;
     border-radius: 1rem;
+}
+
+
+.container--process {
+    --v-space: 10rem;
+    column-gap: 20rem;
+    padding-inline: min(10rem, 10vw);
+}
+
+
+.container--process h1 {
+    width: max(90%, 10vw);
+}
+
+.container--process ul {
+    position: relative;
+    padding-left: 4rem;
+    counter-reset: process;
+}
+.container--process ul::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 89%;
+
+    left: 1.12rem;
+    top: 0;
+
+    background-color: hsl( var(--clr-accent));
+}
+.container--process li {
+    margin-block: 3rem;
+}
+.container--process li::before {
+    counter-increment: process;
+    content: "0"counter(process)"";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl( var(--clr-accent));
+
+    width: 2.2rem;
+    aspect-ratio: 1;
+
+    left: 0;
+
+    background-color: hsl( var(--clr-white) );
+    border-radius: 50%;
+
+    z-index: 1;
+}
+
+@media (max-width: 760px) {
+    .container--process .product-image {
+        padding: 2rem;
+        margin-bottom: 5rem;
+    }
 }
