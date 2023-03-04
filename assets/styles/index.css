@@ -87,7 +87,9 @@ dd {
 }
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
-ol[role='list'] {
+ol[role='list'],
+ul[role='tab'],
+ol[role='tab'] {
     list-style: none;
     padding: 0;
 }
@@ -810,5 +812,136 @@ select {
     }
     .container--faq .faq {
         padding-inline: 1rem;
+    }
+}
+
+
+.container--testimonials {
+    --v-space: 10rem;
+    justify-content: space-between;
+}
+
+.container--testimonials .testimonies{
+    --gap: 0rem;
+    padding-left: var(--p-left, 5rem);
+}
+
+.container--testimonials .comments {
+    padding-inline: var(--p-inline,3rem);
+}
+
+.container--testimonials .comments p{
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.stars {
+    display: flex;
+    column-gap: 1rem;
+    margin-top: .3rem;
+}
+
+.stars li{
+    width: 20px;
+    aspect-ratio: 1;
+    background-image: url('../images/icons/star-off.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.stars li[data-check] {
+    background-image: url('../images/icons/star.svg');
+}
+
+.number-indicators {
+    margin: 0;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-indicators button{
+    border:0;
+    width: 1.5rem;
+    aspect-ratio: 1;
+
+    background: transparent;
+    outline-color: hsl( var(--clr-accent));
+    outline-offset: 5px;
+    
+    display: block;
+    cursor: pointer;
+}
+
+
+.number-indicators button:first-of-type img{
+    transform: rotate(-90deg);
+}
+.number-indicators button:last-of-type img{
+    transform: rotate(90deg);
+}
+
+
+.number-indicators ul li{
+    width: 1.7rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: hsl( var(--clr-accent) );
+    cursor: pointer;
+}
+
+.number-indicators ul li:nth-child(even) {   
+    margin-block: .8rem;
+}
+
+.number-indicators ul li[data-active="true"] {
+    background-color: hsl(var(--clr-primary));
+    color: hsl(var(--clr-white));
+}
+
+@media (max-width: 760px) {
+    .stars.sm-center {
+        justify-content: center;
+    }
+    .number-indicators {        
+        flex-direction: row;
+        
+        column-gap: 1rem;
+    }
+    .number-indicators button:first-of-type img {
+        transform: rotate(-180deg);
+    }
+
+    .number-indicators button:last-of-type img {
+        transform: rotate(0deg);
+    }
+
+
+    .number-indicators ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap:1rem;
+    }
+
+    .container--testimonials .testimonies {
+        --p-left: 1rem
+    }
+    .container--testimonials .comments {
+        --p-inline: 0rem;
+        padding-block: 2rem;
+        text-align: center;
+    }
+    .container--testimonials .comments p {
+        width: 100%;
     }
 }
