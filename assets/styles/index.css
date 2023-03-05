@@ -1036,8 +1036,9 @@ form button:hover {
 }
 
 
-.container--footer-hero {
-    --v-space: 10rem;
+footer{
+    margin-top: 8rem;
+    margin-bottom: 5rem;
 }
 
 .container--footer-hero nav {
