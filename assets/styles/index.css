@@ -167,12 +167,6 @@ select {
     margin-inline: auto;
 }
 
-.w-70 {
-    width: clamp(700px, 70%, 100%);
-}
-.w-50 {
-    width: clamp(700px, 50%, 100%);
-}
 
 @media (max-width: 760px) {
     .flex-sm-column {
@@ -218,6 +212,14 @@ select {
         display: block;
     }
 
+}
+@media (min-width: 985px) {
+    .w-lg-70 {
+        width: clamp(700px, 70%, 100%) !important;
+    }
+    .w-lg-50 {
+        width: clamp(700px, 50%, 100%);
+    }
 }
 
 
@@ -331,6 +333,12 @@ select {
     text-align: center;
 }
 
+@media (max-width: 760px) {
+    .text-center--sm {
+        text-align: center;
+    }
+}
+
 /* Spacing */
 .letter-spacing-1 {
     letter-spacing: 4.75px;
@@ -387,6 +395,9 @@ select {
     }
     .fs-400--sm {
         font-size: var(--fs-400);
+    }
+    .fs-300--sm {
+        font-size: var(--fs-300);
     }
 }
 /* -------------------- */
@@ -589,7 +600,8 @@ a.underline--hover:hover {
 
 /* Hero */
 .container--hero {
-    padding-block: 7rem;
+    
+    padding-block: var(--p-block, 7rem);
 }
 
 .container--hero h1 {
@@ -606,6 +618,7 @@ a.underline--hover:hover {
         flex-direction: column;
         align-items: center;
         row-gap: 2rem;
+        padding-inline: 0rem;
     }
     .container--hero > * {
         width: 90%;
@@ -654,6 +667,7 @@ a.underline--hover:hover {
 .container--services {
     --v-space: 5rem;
 }
+
 
 .container--services .article-list {
     margin-top: 5rem;
@@ -724,6 +738,9 @@ a.underline--hover:hover {
 }
 
 @media (max-width: 760px) {
+    .container--process h1 {
+        width: 100%;
+    }
     .container--process .product-image {
         padding: 2rem;
         margin-bottom: 5rem;
@@ -995,11 +1012,15 @@ form button:hover {
 }
 
 @media (max-width: 760px) {
+
+    .container--email {
+        padding-inline: .9rem !important;
+    }
     .container--email .wrapper {
-        --p: 2rem;
+        --p: .5rem;
     }
     .container--email .wrapper h1 {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -1072,16 +1093,16 @@ footer .attribution:hover{
         margin-inline: 0rem;
     }
     
-    footer {
+    footer .container--footer{
         display: block !important;
     }
     
     footer span{
-        margin-top: 1rem;
+        margin-top: .7rem;
         display: block;
     }
     footer .attribution {
-        margin-top: 1rem;
+        margin-top: .5rem;
         font-size: .9rem;
         display: block;
     }
