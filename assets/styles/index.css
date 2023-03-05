@@ -1004,6 +1004,9 @@ form button:hover {
 }
 
 @media (min-width: 1000px) {
+    form input {
+        padding-right: 7.5rem;
+    }
     form button {
         position: absolute !important;
         top:-.9rem;
