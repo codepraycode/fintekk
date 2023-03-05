@@ -383,8 +383,11 @@ select {
 }
 
 @media (max-width: 760px) {
-    .fs-400--sm {
+    .fs-500--sm {
         font-size: var(--fs-500);
+    }
+    .fs-400--sm {
+        font-size: var(--fs-400);
     }
 }
 /* -------------------- */
@@ -401,7 +404,7 @@ select {
     border-width: 0;
     margin-block: 1rem;
     cursor: pointer;
-    transition: background-color 250ms ease-in-out;
+    transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 
 .btn-md {
@@ -943,5 +946,67 @@ select {
     }
     .container--testimonials .comments p {
         width: 100%;
+    }
+}
+
+
+.container--email .wrapper {
+    padding-inline: var(--p, 10rem);
+    padding-block: 5rem;
+    border-radius: 2rem;
+    max-width: 98%;
+}
+
+.container--email .wrapper h1 {
+    width: 60%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+form {
+    margin-top: 2rem;
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid hsl( var(--clr-white) );
+    padding: .8rem 1rem .8rem 2rem;
+    border-radius: 4rem;
+    font-size: 1rem;
+
+    color:hsl( var(--clr-white) );
+
+    outline-color: hsl(var(--clr-light-accent));
+}
+form input::placeholder {
+    color: hsl( var(--clr-white), .7 );
+}
+
+form button {
+    padding: .8rem 2rem !important;
+    border: 1px solid transparent;
+}
+form button:hover {
+    background-color: hsl( var(--clr-dark), .2);
+    /* border-color: hsl( var(--clr-white)); */
+    color: hsl( var(--clr-white) );
+}
+
+@media (max-width: 760px) {
+    .container--email .wrapper {
+        --p: 2rem;
+    }
+    .container--email .wrapper h1 {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1000px) {
+    form button {
+        position: absolute !important;
+        top:-.9rem;
+        right: .1rem;        
     }
 }
