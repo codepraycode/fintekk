@@ -1,3 +1,7 @@
+AOS.init({
+    "duration": 1000,
+});
+
 const nav =  document.querySelector(".main-navigation");
 const navToggle = document.querySelector(".mobile-navigation-toggle");
 

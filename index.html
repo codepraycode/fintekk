@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
@@ -62,16 +64,17 @@
         </nav>
     </header>
     <main id="main">
+
         <section class="container container--hero flex ">
             <div>
-                <h1 class="text-primary fs-700 fw-500 fs-500--sm">Pay, Invest, Save your Cash with a single bank</h1>
-                <p class="text-dark fw-300 fs-300">
+                <h1 class="text-primary fs-700 fw-500 fs-500--sm" data-aos="fade-down">Pay, Invest, Save your Cash with a single bank</h1>
+                <p class="text-dark fw-300 fs-300" data-aos="fade-up">
                     Fintekk is the bank that does it all. Manage everything directly and easy with fintekk.
                 </p>
 
-                <button class="btn btn-primary btn-md d-md-block mx-md-center">Sign Up for Free</button>
+                <button class="btn btn-primary btn-md d-md-block mx-md-center" data-aos="fade-up">Sign Up for Free</button>
 
-                <div class="flex flex-sm-column align-sm-center justify-md-center">
+                <div class="flex flex-sm-column align-sm-center justify-md-center" data-aos="fade-up">
                     <button class="btn btn-dark-outline btn--icon">
                         <span>
                             <img src="./assets/images/icons/google-play.svg" alt="Google play"/>
@@ -87,13 +90,13 @@
                 </div>
             </div>
 
-            <div>
+            <div data-aos="fade-down-right">
                 <img src="./assets/images/image-hero.png" alt="hero-image"/>
             </div>
 
         </section>
 
-        <section class="container container--companies">
+        <section class="container container--companies" data-aos="zoom-out">
             <div class="companies-items">
                 <img src="./assets/images/companies/bloomberg.svg" alt="bloomberg"/>
                 <img src="./assets/images/companies/cnbc.svg" alt="cncbc"/>
@@ -103,28 +106,28 @@
             </div>
         </section>
 
-        <section class="container" style="--v-space: 10rem;">
+        <section class="container" style="--v-space: 10rem;" data-aos="slide-up">
             <h2 
                 class="text-primary text-center fs-700 fs-500--sm fw-500 mx-auto w-lg-70 line-height-2"
             >More than <span class="text-accent">10,000</span> active users trust Fintekk</h2>
         </section>
 
         <section class="container container--services">
-            <h1 class="fs-200 fw-500 text-center">
+            <h1 class="fs-200 fw-500 text-center" data-aos="flip-up">
                 <span class="uppercase">Our services</span>
                 <span class="d-block fs-500 text-primary">
                     What we offer
                 </span>
             </h1>
 
-            <p class="w-lg-50 my-1 mx-auto fs-200 fw-300 text-center">
+            <p class="w-lg-50 my-1 mx-auto fs-200 fw-300 text-center" data-aos="flip-down">
                 We help individuals become more flexible and
                 responsible with their finances and handle
                 payments smooth and easy. 
             </p>
 
             <div class="article-list flex">
-                <article class="bg-light-accent">
+                <article class="bg-light-accent" data-aos="slide-left">
                     <h1 class="text-primary fs-400 fw-500">Easy Payment</h1>
                     <p class="fw-300">
                         Stress-free payment for all transactions that you do at any time.
@@ -134,7 +137,7 @@
                     <img src="./assets/images/services/easy-payment.svg" alt="Easy payment"/>
                 </article>
 
-                <article class="bg-light">
+                <article class="bg-light" data-aos="slide-down">
                     <h1 class="text-primary fs-400 fw-500">Investment</h1>
                     <p class="fw-300">
                         Grow your money by investing in pre-vetted investment opportunities.
@@ -144,7 +147,7 @@
                     <img src="./assets/images/services/investment.svg" alt="Investment"/>
                 </article>
 
-                <article class="bg-light-accent">
+                <article class="bg-light-accent" data-aos="slide-right">
                     <h1 class="text-primary fs-400 fw-500">Fixed Savings</h1>
                     <p class="fw-300">
                         Build a dedicated savings faster on your terms automatically or manually.
@@ -158,16 +161,16 @@
 
         <section class="container flex flex-sm-column container--process">
 
-            <div class="product-image">
+            <div class="product-image" data-aos="fade-down-left">
                 <img src="./assets/images/product.png" alt="mobile app"/>
             </div>
 
             <div>
-                <h1 class="fs-500 fs-400--sm fw-500 text-primary line-height-1 text-center--sm">
+                <h1 class="fs-500 fs-400--sm fw-500 text-primary line-height-1 text-center--sm" data-aos="slide-down">
                     Start the journey to reach your financial goals today.
                 </h1>
 
-                <ul class="lister" role="list">
+                <ul class="lister" role="list" data-aos="zoom-in">
                     <li>
                         <b class="d-block text-primary fs-300 fw-500">Download the mobile app</b>
                         <span class="d-block text-dark fs-100 fw-300">Get the mobile app from your respective app stores</span>
@@ -184,7 +187,7 @@
                     </li>
                 </ul>
 
-                <button class="btn btn-md btn-primary d-block mx-auto">
+                <button class="btn btn-md btn-primary d-block mx-auto" data-aos="slide-up">
                     Download Now
                 </button>
             </div>
@@ -192,7 +195,7 @@
 
         <section class="container flex flex-sm-column container--faq">
 
-            <div class="bg-accent faq flex flex-column justify-center">
+            <div class="bg-accent faq flex flex-column justify-center" data-aos="fade-left">
                 <h1 class="fs-600 fw-500">FAQs</h1>
 
                 <div class="accordion" role="tablist">
@@ -252,10 +255,10 @@
                 </div>
             </div>
 
-            <img src="./assets/images/question.svg" alt="Faqs questions"/>
+            <img src="./assets/images/question.svg" alt="Faqs questions" data-aos="fade-right"/>
         </section>
 
-        <section class="container container--testimonials flex flex-sm-column">
+        <section class="container container--testimonials flex flex-sm-column" data-aos="fade">
             <h1 class="fs-200 fw-500 text-center--sm">
                 <span class="uppercase">Testimonials</span>
                 <span class="d-block fs-500 text-primary line-height-1">
@@ -295,7 +298,7 @@
             </div>
         </section>
 
-        <section class="container container--email flex align-center justify-center">
+        <section class="container container--email flex align-center justify-center" data-aos="fade-down">
 
             <div class="bg-accent wrapper">
                 <h1 class="fs-600 fs-400--sm fw-500">Start growing your wealth today</h1>
@@ -312,7 +315,7 @@
 
     <footer class="container">
         
-        <section class="container--footer-hero flex flex-sm-column">
+        <section class="container--footer-hero flex flex-sm-column" data-aos="fade">
             <div>
                 <div class="logo">
                     <img src="./assets/images/shared/logo.svg" alt="Fintekk"/>

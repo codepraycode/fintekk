@@ -1089,6 +1089,14 @@ footer .attribution:hover{
     border-color: hsl( var(--clr-dark), .4) !important;
 }
 
+footer {
+    margin-top: 10rem;
+    margin-bottom: 0;
+}
+footer .container--footer {
+    margin-top: 2.5rem;
+}
+
 @media (max-width: 760px) {
     footer a {
         margin-inline: 0rem;
