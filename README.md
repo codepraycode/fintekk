@@ -24,7 +24,7 @@ To get it running on your system, do well to do the following:
 - navigate into the cloned repo (a directory in your computer)
 - open the `index.html` file in your browser
 
-You can also fork this repo and make something interesting from it, if you do, do well to [contact me](#author) to see your work.
+You can also fork this repo and make something interesting from it, if you do, do well to [contact me](#credits) to see your work.
 
 <br/>
 
