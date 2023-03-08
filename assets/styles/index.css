@@ -105,6 +105,7 @@ body {
     line-height: 1.5;
     padding: 0;
     margin: 0;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -168,7 +169,7 @@ select {
 }
 
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .flex-sm-column {
         --gap: 0rem;
         flex-direction: column;
@@ -333,7 +334,7 @@ select {
     text-align: center;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .text-center--sm {
         text-align: center;
     }
@@ -389,7 +390,7 @@ select {
     font-weight: 300;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .fs-500--sm {
         font-size: var(--fs-500);
     }
@@ -518,7 +519,7 @@ a.underline--hover:hover {
     outline-offset: 5px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .mobile-navigation-toggle {
         display: block;
         /* position: absolute;
@@ -651,7 +652,7 @@ a.underline--hover:hover {
 }
 
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .container--companies {
         padding-inline: 1rem;
     }
@@ -684,6 +685,29 @@ a.underline--hover:hover {
     flex-direction: column;
     row-gap: .8rem;
     border-radius: 1rem;
+}
+
+@media (max-width: 760px) {
+    
+    .container--services .article-list>* {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 860px) {
+    .container--services .article-list {
+        align-items: center;
+        row-gap: min(5rem, 6vw);
+        flex-direction: column;
+    }
+
+    .container--services .article-list>* {
+        width: 60%;
+    }
+    .container--services .article-list>*  img{
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 
@@ -737,13 +761,22 @@ a.underline--hover:hover {
     z-index: 1;
 }
 
-@media (max-width: 760px) {
-    .container--process h1 {
-        width: 100%;
-    }
+@media (max-width: 790px) {
+    
     .container--process .product-image {
         padding: 2rem;
         margin-bottom: 5rem;
+    }
+}
+
+@media (max-width: 860px) {
+    .container--process h1 {
+        margin-top: 2rem;
+        width: 100%;
+    }
+    .container--process img{
+        width: 70%;
+        margin: 0 auto;
     }
 }
 
@@ -800,7 +833,8 @@ a.underline--hover:hover {
     background-repeat: no-repeat;
 
     right: .4rem;
-    top: 1rem;
+    top: 0rem;
+    height: 100%;
 
     transition: transform 700ms ease-in-out;
 
@@ -825,13 +859,27 @@ a.underline--hover:hover {
     visibility: visible;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .container--faq {
         flex-direction: column-reverse;
         row-gap: 4rem;
     }
     .container--faq .faq {
         padding-inline: 1rem;
+    }
+}
+
+
+@media (max-width: 860px) {
+
+    .container--faq .faq {
+        padding-block: 4rem;
+        padding-inline: 10%;
+    }
+    
+    .container--faq img{
+        width: 70%;
+        margin: 0 auto;
     }
 }
 
@@ -927,7 +975,7 @@ a.underline--hover:hover {
     color: hsl(var(--clr-white));
 }
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .stars.sm-center {
         justify-content: center;
     }
@@ -1011,7 +1059,7 @@ form button:hover {
     color: hsl( var(--clr-white) );
 }
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
 
     .container--email {
         padding-inline: .9rem !important;
@@ -1021,6 +1069,14 @@ form button:hover {
     }
     .container--email .wrapper h1 {
         width: 100%;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .container--email .wrapper {
+        --p: 1.5rem;
+        width: 80%;
     }
 }
 
@@ -1062,7 +1118,7 @@ footer{
     text-decoration: none;
     font-size: 1rem;
 }
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     .container--footer-hero nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1071,6 +1127,13 @@ footer{
     }
     .container--footer-hero nav > div:nth-child(even){
         justify-self: flex-end;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .container--footer-hero nav {
+        padding-inline: 2rem;
     }
 }
 
@@ -1097,7 +1160,7 @@ footer .container--footer {
     margin-top: 2.5rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 790px) {
     footer a {
         margin-inline: 0rem;
     }

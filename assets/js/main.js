@@ -1,5 +1,6 @@
 AOS.init({
     "duration": 1000,
+    disable: window.innerWidth < 450
 });
 
 const nav =  document.querySelector(".main-navigation");
