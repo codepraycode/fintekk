@@ -3,6 +3,21 @@ AOS.init({
     disable: window.innerWidth < 450
 });
 
+window.onscroll = ()=>updateStickyHeader();
+// Header scroll effect
+const header = document.getElementById("header");
+
+const sticky = header.offsetTop;
+
+function updateStickyHeader() {
+    if (window.scrollY > sticky) {
+        header.classList.add("sticky")
+        console.log("Stick")
+    }else {
+        header.classList.remove("sticky")
+    }
+}
+
 const nav =  document.querySelector(".main-navigation");
 const navToggle = document.querySelector(".mobile-navigation-toggle");
 

@@ -476,7 +476,15 @@ select {
 }
 
 .container--header {
+    
+    z-index: 900;
+}
+.container--header.sticky {
+    position: fixed;
+    top: 0rem;
+    width: 100%;
     box-shadow: 0px 2px 8px 0px hsla(227, 100%, 59%, 0.1);
+    background-color: hsl(var(--clr-white));
 }
 
 /* Primary header */
@@ -522,9 +530,6 @@ a.underline--hover:hover {
 @media (max-width: 790px) {
     .mobile-navigation-toggle {
         display: block;
-        /* position: absolute;
-        right: 1rem;
-        top: 2rem; */
         z-index: 1500;
         background-color: transparent;
         background-image: url("../images/icons/hamburger.svg");
@@ -548,12 +553,14 @@ a.underline--hover:hover {
         top: 0;
         display: block;
         max-width: 50vw;
-        height: 100%;
+        height: fit-content;
         padding-top:  5rem;
-        padding-inline: 1rem;
+        padding-inline: 3rem;
+        border-radius: 0 0 0 2rem;
         background-color: hsl( var(--clr-white));
         box-shadow: 0px 2px 8px 0px hsla(227, 100%, 59%, 0.1);
         transform: translateX(100%);
+        z-index: 1000;
     }
     
     .main-navigation[data-visible="true"] {
