@@ -43,6 +43,7 @@ links.forEach((each_link)=>{
         const elem = document.getElementById(id);
         if (elem) {
             elem.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            toggleSidebar(false)
         }
     })
 })
@@ -68,7 +69,6 @@ function toggleSidebar(state=null){
     if (state !== null){
         nav.setAttribute('data-visible', Boolean(state));
         navToggle.setAttribute("aria-expanded", Boolean(state));
-        console.log("Got here", state)
     }
     // If the menu is closed, open it
     else if (visibility === 'false') {
