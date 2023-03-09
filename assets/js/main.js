@@ -12,7 +12,6 @@ const sticky = header.offsetTop;
 function updateStickyHeader() {
     if (window.scrollY > sticky) {
         header.classList.add("sticky")
-        console.log("Stick")
     }else {
         header.classList.remove("sticky")
     }

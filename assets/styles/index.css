@@ -164,6 +164,15 @@ select {
 .my-1 {
     margin-block: 1rem;
 }
+.my-2 {
+    margin-block: 2rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
 .mx-auto {
     margin-inline: auto;
 }
@@ -1150,14 +1159,6 @@ footer a{
     text-decoration: none;
     margin-inline: .3rem;
 }
-footer .attribution{
-    color: hsl(var(--clr-dark), .4);
-    margin-inline: 0;
-}
-
-footer .attribution:hover{
-    border-color: hsl( var(--clr-dark), .4) !important;
-}
 
 footer {
     margin-top: 10rem;
@@ -1180,10 +1181,46 @@ footer .container--footer {
         margin-top: .7rem;
         display: block;
     }
-    footer .attribution {
-        margin-top: .5rem;
-        font-size: .9rem;
-        display: block;
-    }
     
+}
+
+
+footer .attribution {
+    justify-content: space-around;
+}
+footer .attribution .image {
+    width: 6rem;
+    aspect-ratio: 1;
+    border-radius: 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-inline: auto;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: .3rem;
+    margin-top: .5rem;
+}
+.social-links a {
+    display: block;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.social-links a.behance{
+    background-image: url("../images/icons/behance.svg");
+}
+.social-links a.twitter{
+    background-image: url("../images/icons/twitter.svg");
+}
+.social-links a.linkedin{
+    background-image: url("../images/icons/linkedin.svg");
+}
+.social-links a.github{
+    background-image: url("../images/icons/github.svg");
 }
