@@ -17,6 +17,12 @@ function updateStickyHeader() {
     }
 }
 
+
+// Form
+document.getElementById("form").addEventListener('submit', (e)=>{
+    e.preventDefault();
+});
+
 const nav =  document.querySelector(".main-navigation");
 const navToggle = document.querySelector(".mobile-navigation-toggle");
 
