@@ -1187,6 +1187,7 @@ footer .container--footer {
 
 footer .attribution {
     justify-content: space-around;
+    margin-block: 1rem;
 }
 footer .attribution .image {
     width: 6rem;
@@ -1211,6 +1212,14 @@ footer .attribution .image {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
+
+    transition: transform 250ms ease-in-out;
+}
+.social-links a:hover,
+.social-links a:focus {
+    top: -.3rem;
+    transform: scale(1.3);
 }
 .social-links a.behance{
     background-image: url("../images/icons/behance.svg");
