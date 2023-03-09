@@ -26,6 +26,27 @@ document.getElementById("form").addEventListener('submit', (e)=>{
 const nav =  document.querySelector(".main-navigation");
 const navToggle = document.querySelector(".mobile-navigation-toggle");
 
+// nav link
+const links = nav.querySelectorAll('a[href]')
+links.forEach((each_link)=>{
+    each_link.addEventListener('click', (e)=>{
+        e.preventDefault();
+
+        links.forEach(e=>e.parentElement.classList.remove('active'));
+
+        e.target.parentElement.classList.add('active');
+
+        // Scrool to element
+        let id = e.target.href;
+        id = id.slice(id.indexOf("#")+1,)
+        
+        const elem = document.getElementById(id);
+        if (elem) {
+            elem.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        }
+    })
+})
+
 //  When the hamburger is clicked
 navToggle.addEventListener("click", ()=>toggleSidebar(null));
 

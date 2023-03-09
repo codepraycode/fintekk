@@ -519,6 +519,17 @@ select {
     border: 0;
 }
 
+.main-navigation a,
+.main-navigation a:visited {
+    color: hsl( var(--clr-primary));
+}
+
+.main-navigation a,
+.main-navigation a:active,
+.main-navigation .active>a {
+    color: hsl( var(--clr-accent));
+}
+
 .main-navigation a:focus,
 .main-navigation a:hover,
 .main-navigation .active > a,
@@ -798,7 +809,7 @@ a.underline--hover:hover {
 
 
 .container--faq {
-    --v-space: 5rem;
+    --v-space: 9rem;
     justify-content: center;
 }
 
